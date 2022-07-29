@@ -1,0 +1,12 @@
+Package: clint
+Type: Package
+Title: clint; a clinical trial simulation tool
+Version: 0.1.0
+Authors@R: person("Braniff", "Nate", email = "nate.braniff@gmail.com",
+                  role = c("aut", "cre"))
+Description: An R package for clinical trial simulation using PKPD/QSP models 
+Encoding: UTF-8
+LazyData: true
+Depends: 
+    R (>= 4.1)
+Imports:
