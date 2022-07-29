@@ -10,3 +10,4 @@ LazyData: true
 Depends: 
     R (>= 4.1)
 Imports:
+RoxygenNote: 7.2.1
