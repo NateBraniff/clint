@@ -1,14 +1,18 @@
-#' Load a Matrix
+#' Patient Class
 #'
-#' This function loads a file as a matrix. It assumes that the first column
-#' contains the rownames and the subsequent columns are the sample identifiers.
-#' Any rows with duplicated row names will be dropped with the first one being
-#' kepted.
+#' This class ...
 #'
 #' @param infile Path to the input file
 #' @return A matrix of the infile
 #' @export
-Patient<-function(string){
-  
-  print(string)
-}
+Patient<-R6::R6Class("Patient",
+  public = list(
+    model = NULL,
+    initialize = function(model = NA) {
+      self$model <- model
+    },
+    simulate = function(ic,t0,tf,covariates) {
+      return(self$model(ic,t0,tf,covariates))
+    }
+  )
+)
